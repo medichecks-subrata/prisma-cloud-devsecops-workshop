@@ -1,3 +1,18 @@
+terraform {
+  cloud {
+    organization = "subu-devsecops-org"
+    workspaces {
+      name = "prisma-cloud-devsecops-workshop3"
+    }
+  }
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
 provider "aws" {
   region = "us-west-2"
 }
